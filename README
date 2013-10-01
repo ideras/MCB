@@ -1,0 +1,14 @@
+MCB Generator and Autoleveller
+by Ivan de Jesus Deras (2013, ideras@gmail.com)
+
+This program includes the following modules:
+
+1. Gerber to GCode: This module basically uses pcb2gcode to generate gcode from gerber files. 
+2. Autoleveller: This modules is able to read GCode produced by pcb-gcode (Eagle plugin) or pcb2gcode etch file and add gcode to probe the board beforehand, then adjust milling depth to compensate for board/table height variations.
+
+3. 2D GCode Backplotter: This module is able to parse GCode produced pcb-probe (Eagle plugin), pcb2gcode and even Autoleveller output, and is able to plot the resulting gcode including the probe points.  This is useful for debugging purposes.
+
+The program uses QT for the GUI, is has been tested on Windows and Linux, and it should work on MacOS (because there's a QT version for MAC).
+The licence used for the program is GPL version 3.
+
+Note: MCB stands for Milled Circuit Board.
