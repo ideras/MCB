@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/MCBGenerator">
+        <file>Resources/fileopen.png</file>
+        <file>Resources/viewmagfit.png</file>
+        <file>Resources/exit.png</file>
+        <file>Resources/fileclose.png</file>
+    </qresource>
+</RCC>

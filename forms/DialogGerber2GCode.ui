@@ -1,0 +1,1390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogGerber2GCode</class>
+ <widget class="QDialog" name="DialogGerber2GCode">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>824</width>
+    <height>760</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gerber to GCode Wizard</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>811</width>
+     <height>446</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <property name="tabsClosable">
+    <bool>false</bool>
+   </property>
+   <widget class="QWidget" name="tabInputFiles">
+    <attribute name="title">
+     <string>Files</string>
+    </attribute>
+    <widget class="QGroupBox" name="gbFrontSide">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>681</width>
+       <height>86</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Board Front Side</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <widget class="QPushButton" name="pbBrowseInFrontSide">
+      <property name="geometry">
+       <rect>
+        <x>585</x>
+        <y>20</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Browse</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtFrontSideInFilePath">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>20</y>
+        <width>496</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>25</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Input :</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>60</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Output :</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pbBrowseOutFrontSide">
+      <property name="geometry">
+       <rect>
+        <x>585</x>
+        <y>55</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Browse</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtFrontSideOutFilePath">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>55</y>
+        <width>496</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="gbBackSide">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>105</y>
+       <width>681</width>
+       <height>86</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Board Back Side</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <widget class="QPushButton" name="pbBrowseInBackSide">
+      <property name="geometry">
+       <rect>
+        <x>585</x>
+        <y>20</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Browse</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtBackSideInFilePath">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>20</y>
+        <width>496</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>25</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Input :</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>60</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Output :</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pbBrowseOutBackSide">
+      <property name="geometry">
+       <rect>
+        <x>585</x>
+        <y>55</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Browse</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtBackSideOutFilePath">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>55</y>
+        <width>496</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="gbDrill">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>200</y>
+       <width>681</width>
+       <height>86</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Drill</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <widget class="QPushButton" name="pbBrowseInDrill">
+      <property name="geometry">
+       <rect>
+        <x>585</x>
+        <y>20</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Browse</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtDrillInFilePath">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>20</y>
+        <width>496</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>25</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Input :</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>60</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Output :</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pbBrowseOutDrill">
+      <property name="geometry">
+       <rect>
+        <x>585</x>
+        <y>55</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Browse</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtDrillOutFilePath">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>55</y>
+        <width>496</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="gbOutline">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>295</y>
+       <width>681</width>
+       <height>86</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Board Outline</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <widget class="QPushButton" name="pbBrowseInDrill_3">
+      <property name="geometry">
+       <rect>
+        <x>585</x>
+        <y>20</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Browse</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtOutlineInFilePath">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>20</y>
+        <width>496</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_25">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>25</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Input :</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_26">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>60</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Output :</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pbBrowseOutDrill_3">
+      <property name="geometry">
+       <rect>
+        <x>585</x>
+        <y>55</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Browse</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtOutlineOutFilePath">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>55</y>
+        <width>496</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tabOptions">
+    <attribute name="title">
+     <string>GCode Generation Options</string>
+    </attribute>
+    <widget class="QTabWidget" name="tabMilling">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>73</y>
+       <width>776</width>
+       <height>336</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Mill</string>
+      </attribute>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>35</y>
+         <width>136</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Engraving Depth : </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>70</y>
+         <width>136</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Traverse Height :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>105</y>
+         <width>136</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Mill Feed :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>175</y>
+         <width>136</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Extra Passes :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="txtMillEngravingDepth">
+       <property name="geometry">
+        <rect>
+         <x>145</x>
+         <y>30</y>
+         <width>96</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="decimals">
+        <number>6</number>
+       </property>
+       <property name="minimum">
+        <double>-10000.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>10000.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.001000000000000</double>
+       </property>
+       <property name="value">
+        <double>-0.000160000000000</double>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="txtMillTraverseHeight">
+       <property name="geometry">
+        <rect>
+         <x>145</x>
+         <y>65</y>
+         <width>96</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="decimals">
+        <number>4</number>
+       </property>
+       <property name="minimum">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>10000.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.010000000000000</double>
+       </property>
+       <property name="value">
+        <double>0.200000000000000</double>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="txtMillFeed">
+       <property name="geometry">
+        <rect>
+         <x>145</x>
+         <y>100</y>
+         <width>96</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <double>10000.000000000000000</double>
+       </property>
+       <property name="value">
+        <double>4.000000000000000</double>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="txtMillExtraPasses">
+       <property name="geometry">
+        <rect>
+         <x>145</x>
+         <y>170</y>
+         <width>91</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="txtMillOffset">
+       <property name="geometry">
+        <rect>
+         <x>145</x>
+         <y>135</y>
+         <width>96</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="decimals">
+        <number>4</number>
+       </property>
+       <property name="maximum">
+        <double>10000.000000000000000</double>
+       </property>
+       <property name="value">
+        <double>0.004000000000000</double>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_16">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>140</y>
+         <width>136</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Offset :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblMillEngravingDepthUnit">
+       <property name="geometry">
+        <rect>
+         <x>245</x>
+         <y>35</y>
+         <width>106</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>inches</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblMillTraverseHeightUnit">
+       <property name="geometry">
+        <rect>
+         <x>245</x>
+         <y>70</y>
+         <width>106</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>inches</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblMillFeedUnit">
+       <property name="geometry">
+        <rect>
+         <x>245</x>
+         <y>105</y>
+         <width>226</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>inches/minute</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblMillOffsetUnit">
+       <property name="geometry">
+        <rect>
+         <x>245</x>
+         <y>140</y>
+         <width>96</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>inches</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_5">
+      <attribute name="title">
+       <string>Drill</string>
+      </attribute>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>75</y>
+         <width>136</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Tool Change Height :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="txtDrillToolChangeHeight">
+       <property name="geometry">
+        <rect>
+         <x>145</x>
+         <y>70</y>
+         <width>96</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="decimals">
+        <number>4</number>
+       </property>
+       <property name="maximum">
+        <double>1000.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.100000000000000</double>
+       </property>
+       <property name="value">
+        <double>0.800000000000000</double>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>136</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Drill Depth : </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="txtDrillDepth">
+       <property name="geometry">
+        <rect>
+         <x>145</x>
+         <y>35</y>
+         <width>96</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="decimals">
+        <number>4</number>
+       </property>
+       <property name="minimum">
+        <double>-10000.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>10000.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.010000000000000</double>
+       </property>
+       <property name="value">
+        <double>-0.080000000000000</double>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_12">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>110</y>
+         <width>136</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Drilll Feed :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="txtDrillFeed">
+       <property name="geometry">
+        <rect>
+         <x>145</x>
+         <y>105</y>
+         <width>96</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <double>10000.000000000000000</double>
+       </property>
+       <property name="value">
+        <double>3.000000000000000</double>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblDrillDepthUnit">
+       <property name="geometry">
+        <rect>
+         <x>245</x>
+         <y>40</y>
+         <width>106</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>inches</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblDrillToolChangeHeightUnit">
+       <property name="geometry">
+        <rect>
+         <x>245</x>
+         <y>75</y>
+         <width>106</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>inches</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblDrillFeedUnit">
+       <property name="geometry">
+        <rect>
+         <x>245</x>
+         <y>110</y>
+         <width>226</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>inches/minute</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_4">
+      <attribute name="title">
+       <string>Outline</string>
+      </attribute>
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>110</y>
+         <width>136</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Cut Infeed :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_14">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>136</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Cut Depth : </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="txtOutlineCutDepth">
+       <property name="geometry">
+        <rect>
+         <x>145</x>
+         <y>35</y>
+         <width>96</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="decimals">
+        <number>4</number>
+       </property>
+       <property name="minimum">
+        <double>-10000.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>10000.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.010000000000000</double>
+       </property>
+       <property name="value">
+        <double>-0.080000000000000</double>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_15">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>75</y>
+         <width>136</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Cut Feed :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="txtOutlineCutFeed">
+       <property name="geometry">
+        <rect>
+         <x>145</x>
+         <y>70</y>
+         <width>96</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="decimals">
+        <number>4</number>
+       </property>
+       <property name="maximum">
+        <double>10000.000000000000000</double>
+       </property>
+       <property name="value">
+        <double>3.000000000000000</double>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblOutlineCutDepthUnit">
+       <property name="geometry">
+        <rect>
+         <x>245</x>
+         <y>40</y>
+         <width>106</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>inches</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblOutlineCutInfeedUnit">
+       <property name="geometry">
+        <rect>
+         <x>245</x>
+         <y>110</y>
+         <width>106</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>inches</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblOutlineCutFeedUnit">
+       <property name="geometry">
+        <rect>
+         <x>245</x>
+         <y>75</y>
+         <width>226</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>inches/minute</string>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="txtOutlineCutInfeed">
+       <property name="geometry">
+        <rect>
+         <x>145</x>
+         <y>105</y>
+         <width>96</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="decimals">
+        <number>4</number>
+       </property>
+       <property name="maximum">
+        <double>10000.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.010000000000000</double>
+       </property>
+       <property name="value">
+        <double>0.040000000000000</double>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_5">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>9</y>
+       <width>251</width>
+       <height>46</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="title">
+      <string>Units</string>
+     </property>
+     <widget class="QRadioButton" name="rbInches">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>82</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Inches</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="rbMillimeters">
+      <property name="geometry">
+       <rect>
+        <x>125</x>
+        <y>20</y>
+        <width>82</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Millimeters</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>510</y>
+     <width>811</width>
+     <height>233</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Message Log</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPlainTextEdit" name="txtMessageLog">
+      <property name="font">
+       <font>
+        <family>Courier</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="pbGenGCode">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>455</y>
+     <width>156</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Generate &amp;GCode</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbClose">
+   <property name="geometry">
+    <rect>
+     <x>315</x>
+     <y>455</y>
+     <width>136</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&amp;Close</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbClearMessageLog">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>455</y>
+     <width>136</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Clear Message Log</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pbClose</sender>
+   <signal>clicked()</signal>
+   <receiver>DialogGerber2GCode</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>409</x>
+     <y>457</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>395</x>
+     <y>321</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbGenGCode</sender>
+   <signal>clicked()</signal>
+   <receiver>DialogGerber2GCode</receiver>
+   <slot>pbGenGCodeClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>82</x>
+     <y>478</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>160</x>
+     <y>344</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbClearMessageLog</sender>
+   <signal>clicked()</signal>
+   <receiver>DialogGerber2GCode</receiver>
+   <slot>clearMessageLog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>211</x>
+     <y>473</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>360</x>
+     <y>341</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbBrowseInFrontSide</sender>
+   <signal>clicked()</signal>
+   <receiver>DialogGerber2GCode</receiver>
+   <slot>browseInFrontSide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>656</x>
+     <y>69</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>757</x>
+     <y>69</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbBrowseOutFrontSide</sender>
+   <signal>clicked()</signal>
+   <receiver>DialogGerber2GCode</receiver>
+   <slot>browseOutFrontSide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>660</x>
+     <y>105</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>757</x>
+     <y>106</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbBrowseInBackSide</sender>
+   <signal>clicked()</signal>
+   <receiver>DialogGerber2GCode</receiver>
+   <slot>browseInBackSide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>657</x>
+     <y>165</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>747</x>
+     <y>167</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbBrowseOutBackSide</sender>
+   <signal>clicked()</signal>
+   <receiver>DialogGerber2GCode</receiver>
+   <slot>browseOutBackSide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>673</x>
+     <y>204</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>746</x>
+     <y>202</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbBrowseInDrill</sender>
+   <signal>clicked()</signal>
+   <receiver>DialogGerber2GCode</receiver>
+   <slot>browseInDrill()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>674</x>
+     <y>258</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>756</x>
+     <y>259</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbBrowseOutDrill</sender>
+   <signal>clicked()</signal>
+   <receiver>DialogGerber2GCode</receiver>
+   <slot>browseOutDrill()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>661</x>
+     <y>292</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>752</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbBrowseInDrill_3</sender>
+   <signal>clicked()</signal>
+   <receiver>DialogGerber2GCode</receiver>
+   <slot>browseInOutline()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>662</x>
+     <y>355</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>752</x>
+     <y>351</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbBrowseOutDrill_3</sender>
+   <signal>clicked()</signal>
+   <receiver>DialogGerber2GCode</receiver>
+   <slot>browseOutOutline()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>663</x>
+     <y>394</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>750</x>
+     <y>398</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rbMillimeters</sender>
+   <signal>clicked()</signal>
+   <receiver>DialogGerber2GCode</receiver>
+   <slot>changeUnitMM()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>183</x>
+     <y>72</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>571</x>
+     <y>471</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rbInches</sender>
+   <signal>clicked()</signal>
+   <receiver>DialogGerber2GCode</receiver>
+   <slot>changeUnitInches()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>103</x>
+     <y>68</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>699</x>
+     <y>461</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>browseInFrontSide()</slot>
+  <slot>browseOutFrontSide()</slot>
+  <slot>browseInBackSide()</slot>
+  <slot>browseOutBackSide()</slot>
+  <slot>browseInDrill()</slot>
+  <slot>browseOutDrill()</slot>
+  <slot>browseInOutline()</slot>
+  <slot>browseOutOutline()</slot>
+  <slot>pbGenGCodeClicked()</slot>
+  <slot>clearMessageLog()</slot>
+  <slot>changeUnitMM()</slot>
+  <slot>changeUnitInches()</slot>
+ </slots>
+</ui>
